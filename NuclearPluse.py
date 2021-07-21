@@ -12,7 +12,7 @@ from datetime import datetime
 
 def NuclearPulseGenerator(AvrValue):
     #获取当前时间做随机数的种子
-    NowTime = datetime.now().strftime("%M%S%f")
+    NowTime = datetime.now().strftime("%S%f")
     np.random.seed(int(NowTime))
 
     #定义返回的随机脉冲
@@ -30,7 +30,6 @@ def NuclearPulseGenerator(AvrValue):
     else:
         BackPulse = np.random.poisson(lam=AvrValue)
 
-    
     #返回脉冲值
     return BackPulse
 
