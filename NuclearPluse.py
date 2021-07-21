@@ -10,10 +10,6 @@ import numpy as np
 import random as rd
 from datetime import datetime
 
-
-
-
-
 def NuclearPulseGenerator(AvrValue):
     #获取当前时间做随机数的种子
     NowTime = datetime.now().strftime("%M%S%f")
@@ -43,5 +39,5 @@ count = []
 for i in range(0,100):
     count.append(NuclearPulseGenerator(0.8))
 
-
+#输出验证结果
 print(np.average(count))
